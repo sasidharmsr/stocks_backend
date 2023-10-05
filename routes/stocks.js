@@ -8,7 +8,7 @@ require('dotenv').config();
 router.get('/home', async (req, res) => {
     try {
       const apiUrl = `https://www.alphavantage.co/query?function=TOP_GAINERS_LOSERS&apikey=${apiKey}`;
-  
+    console.log(apiUrl)
       const response = await axios.get(apiUrl);
       const data = response.data;
       let stocks=[]

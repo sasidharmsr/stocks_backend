@@ -11,6 +11,7 @@ router.get('/home', async (req, res) => {
     console.log(apiUrl)
       const response = await axios.get(apiUrl);
       const data = response.data;
+      console.log(data)
       let stocks=[]
       let stocksString="Select symbol,name from stockes_data where symbol IN ("
       let gainers_length=data["top_gainers"].length;
